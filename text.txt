@@ -1,0 +1,60 @@
+## **Part One: Solidify Terminology**
+
+In your own terms, define the following terms:
+
+- What is HTTP?
+
+    HTTP stands for Hypertext Transfer Protocol. It is a set of rules that specifies how communication should work
+    or the format of communication should be, between a client and the server.
+
+- What is a URL?
+
+    URL stands for Universal Resource Locator. It is the address for an internet resource.
+
+- What is DNS?
+
+    DNS stands for Domain Name System. It translate hostnames into IP addresses.
+
+- What is a query string?
+
+    Query string provides extra information such as search terms, info from forms, etc. In key-value pairs.
+
+- What are two HTTP verbs and how are they different?
+
+    GET and POST. GET sends the request to the server without changing the server data, whereas POST does.
+
+- What is an HTTP request?
+
+    An HTTP request is a request sent to the server from the client's side that follows the HTTP.
+
+- What is an HTTP response?
+
+    An HTTP response is a response sent back to the client from the server side that follows the HTTP.
+
+- What is an HTTP header? Give a couple examples of request and response headers you have seen.
+
+    An HTTP header is the information we are requesting and getting back, such as Accept-Language and Content-Language, etc
+
+- What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+
+    1. Your browser “resolves” the name into an IP address using DNS
+    2. Your browser makes a request to that IP address, including headers (info about browser, any previous cookies, and other things)
+    3. The server sends a response (typically, HTML, with a status code 200 if it was sucessful)
+    4. The browser makes a DOM from that HTML, and finds any other resources needed (images, CSS, JavaScript, etc)
+    5. The browser makes separate HTTP requests for those resources and receives response from the server for each
+
+==========================================================================================================================================
+## **Part Two: Practice Tools**
+
+1. Using ***curl***, make a ***GET*** request to the *icanhazdadjoke.com* API to find all jokes involving the word “pirate”
+
+    curl -s "https://icanhazdadjoke.com/search?term=pirate"
+
+2. Use ***dig*** to find what the IP address is for *icanhazdadjoke.com*
+
+    dig icanhazdadjoke.com
+
+    --> 104.21.66.15
+    --> 172.67.198.173
+
+3. Make a simple web page and serve it using ***python3 -m http.server***. Visit the page in a browser.
